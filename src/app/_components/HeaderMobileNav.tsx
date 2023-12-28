@@ -34,14 +34,13 @@ export default function MobileNav() {
         </svg>
       </button>
       <div className={`fixed left-0 top-0 z-20 h-full w-full transform inset-0 backdrop-blur-md border-l-[1px] border-orange duration-300 ease-in-out ${navShow ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex justify-between items-center pl-5 pr-3 pt-7 pb-4 border-b border-white mx-3">
+        <div className="flex justify-between items-center pl-5 pr-3 pt-8 pb-3 border-b border-white mx-3 mb-3">
           <div>
             <Link onClick={onToggleNav} className="m-0 leading-5 text-orange font-serif italic text-1xl" href="/" aria-label={siteMetadata.headerTitle}>
-              All Killer, <br />
-              No Filler.
+              All Killer, No Filler.
             </Link>
           </div>
-          <div>
+          <div className="flex">
             <button className="h-8 w-8" aria-label="Toggle Menu" onClick={onToggleNav}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="text-white">
                 <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -52,7 +51,7 @@ export default function MobileNav() {
         <div className="fixed h-full w-full">
           <ul>
             {headerNavLinks.map((link, index) => (
-              <li key={link.title} className="pl-8 py-4">
+              <li key={link.title} className="pl-8 py-3">
                 <Link href={link.href} className="text-xl tracking-widest text-white" onClick={onToggleNav}>
                   {link.title}
                   {index < headerNavLinks.length - 0 && <span className="text-orange mx-3">→</span>}

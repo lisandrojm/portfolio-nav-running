@@ -1,7 +1,7 @@
 /* src/app/_data/siteMetadata.js */
 
 const siteMetadata = {
-  title: 'lisandrojm 🎯',
+  title: 'lisandrojm',
   author: 'Lisandro Martínez',
   headerTitle: 'lisandrojm | FullStackDev ',
   description: 'Lisandro Martinez. Argentinian Full-Stack Dev. Developer based in Argentina.',

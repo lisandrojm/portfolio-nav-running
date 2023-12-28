@@ -2,7 +2,6 @@
 
 'use client';
 
-import styles from '@/_styles/_components/Form.module.css';
 import { useState } from 'react';
 import { Button, FloatingLabelInput, FloatingLabelTextarea } from '@/_components/_ui';
 import SectionContainer from '@/_components/SectionContainer';

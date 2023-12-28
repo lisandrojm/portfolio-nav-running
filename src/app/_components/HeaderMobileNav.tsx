@@ -2,7 +2,6 @@
 
 'use client';
 
-import styles from '@/_styles/_components/MobileNav.module.css';
 import { useState } from 'react';
 import siteMetadata from '@/_data/siteMetadata';
 import Link from './Link';

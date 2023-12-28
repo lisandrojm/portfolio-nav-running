@@ -1,6 +1,5 @@
 /* src/app/_/Navbar.tsx */
 
-import styles from '@/_styles/_components/Navbar.module.css';
 import siteMetadata from '@/_data/siteMetadata';
 import HeaderFooterContainer from '@/_components/HeaderFooterContainer';
 import headerNavLinks from '@/_data/headerNavLinks';
@@ -16,7 +15,7 @@ interface NavLink {
 export default function Navbar() {
   return (
     <HeaderFooterContainer>
-      <header className={`${styles.navbar}`}>
+      <header>
         <nav>
           <div className="container mx-auto">
             <div className="flex items-center justify-between border-b border-white pb-2 px-3">

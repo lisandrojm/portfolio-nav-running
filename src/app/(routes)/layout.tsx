@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import siteMetadata from '@/_data/siteMetadata';
 import { Roboto_Mono, Roboto_Serif, Roboto_Flex } from 'next/font/google';
 import '@/_styles/globals.css';
+import Background from '@/_components/Background';
 import Navbar from '@/_components/Header';
 import Footer from '@/_components/Footer';
 import Provider from '@/_components/Provider';
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang={siteMetadata.language} className={`${roboto_mono.variable} ${roboto_serif.variable} ${roboto_flex.variable}`}>
       <body className="font-mono">
         <Provider>
+          <Background />
           <Navbar />
           <main>{children}</main>
           <Footer />

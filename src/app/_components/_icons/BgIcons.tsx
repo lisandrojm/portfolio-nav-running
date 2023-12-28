@@ -33,7 +33,7 @@ const BgIcons: React.FC<BgIconsProps> = ({ kind, size = 2 }) => {
   const IconComponent = components[kind];
 
   return (
-    <span className={`text-orange text-${size}xl opacity-30`}>
+    <span className={`text-orange text-${size}xl opacity-20`}>
       <IconComponent />
     </span>
   );

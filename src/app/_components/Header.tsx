@@ -4,7 +4,6 @@ import styles from '@/_styles/_components/Navbar.module.css';
 import siteMetadata from '@/_data/siteMetadata';
 import HeaderFooterContainer from '@/_components/HeaderFooterContainer';
 import headerNavLinks from '@/_data/headerNavLinks';
-import Image from 'next/image';
 import Link from '@/_components/Link';
 import HeaderMobileNav from '@/_components/HeaderMobileNav';
 import ThemeSwitcher from '@/_components/ThemeSwitcher';

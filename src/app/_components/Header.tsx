@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <header>
       <nav>
-        <div className="pt-4 pb-2 flex items-center justify-between border-b border-white fixed top-0 z-10 w-full backdrop-brightness-150">
+        <div className="pt-4 pb-2 flex items-center justify-between border-b border-white fixed top-0 z-10 bg-black w-full">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">

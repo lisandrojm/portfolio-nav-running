@@ -3,14 +3,13 @@
 import siteMetadata from '@/_data/siteMetadata';
 import LinkIcon from '@/_components/_icons/LinksIcons';
 import Link from 'next/link';
-import SectionContainer from '@/_components/SectionContainer';
 
 export default function Footer() {
   return (
-    <SectionContainer>
-      <footer>
-        <div className="pt-3 pb-5 border-t border-white px-2 md:px-1 flex flex-col md:flex-row justify-between items-end md:items-center gap-4">
-          <div className="flex justify-center items-center">
+    <footer>
+      <div className="container mx-auto px-3 lg:px-40">
+        <div className="pt-4 pb-5 border-t border-white flex flex-col md:flex-row justify-between items-end md:items-center gap-4 px-3">
+          <div className="flex justify-center items-center xs--hide">
             <h6 className="font-serif text-xl text-orange">
               site stack <span className="px-2">|</span>
             </h6>
@@ -36,7 +35,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-      </footer>
-    </SectionContainer>
+      </div>
+    </footer>
   );
 }

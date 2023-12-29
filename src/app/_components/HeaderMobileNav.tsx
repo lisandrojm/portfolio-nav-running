@@ -9,6 +9,7 @@ import LinkIcon from '@/_components/_icons/LinksIcons';
 import headerNavLinks from '@/_data/headerNavLinks';
 import { Button } from '@/_components/_ui';
 import LinkButton from '@/_components/_ui/LinkButton';
+import SectionContainer from '@/_components/SectionContainer';
 
 export default function MobileNav() {
   const [navShow, setNavShow] = useState(false);
@@ -33,8 +34,8 @@ export default function MobileNav() {
         </svg>
       </button>
       <div className={`fixed left-0 top-0 z-100 h-full w-full transform inset-0 bg-black border-l-[1px] border-orange duration-300 ease-in-out ${navShow ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className=" container mx-auto px-3 xl:px-20 pt-8 ">
-          <div className="flex justify-between items-center border-b border-white pb-3 mb-3">
+        <SectionContainer>
+          <div className="flex justify-between items-center border-b border-white pb-3 mb-3 pt-8 px-3">
             <div>
               <Link onClick={onToggleNav} className="m-0 leading-5 text-orange font-serif italic text-1xl" href="/" aria-label={siteMetadata.headerTitle}>
                 All Killer, No Filler.
@@ -48,7 +49,7 @@ export default function MobileNav() {
               </button>
             </div>
           </div>
-          <div className="fixed h-full w-full">
+          <div className="fixed h-full w-full px-3">
             <ul>
               {headerNavLinks.map((link, index) => (
                 <li key={link.title} className="py-3">
@@ -73,7 +74,7 @@ export default function MobileNav() {
               </div>
             </div>
           </div>
-        </div>
+        </SectionContainer>
       </div>
     </div>
   );

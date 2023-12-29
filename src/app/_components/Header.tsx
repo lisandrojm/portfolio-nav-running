@@ -6,6 +6,7 @@ import Link from '@/_components/Link';
 import HeaderMobileNav from '@/_components/HeaderMobileNav';
 import ThemeSwitcher from '@/_components/ThemeSwitcher';
 import LinkIcon from '@/_components/_icons/LinksIcons';
+import SectionContainer from '@/_components/SectionContainer';
 
 interface NavLink {
   title: string;
@@ -15,7 +16,7 @@ export default function Navbar() {
   return (
     <header>
       <nav className="fixed top-0 z-10 bg-black w-full">
-        <div className="container mx-auto px-3 lg:px-40 ">
+        <SectionContainer>
           <div className="flex items-center justify-between pt-6 pb-2 border-b border-white px-3">
             <div>
               <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -52,7 +53,7 @@ export default function Navbar() {
               <HeaderMobileNav />
             </div>
           </div>
-        </div>
+        </SectionContainer>
       </nav>
     </header>
   );

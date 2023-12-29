@@ -12,7 +12,7 @@ import SectionContainer from '@/_components/SectionContainer';
 export default function Home() {
   return (
     <SectionContainer>
-      <div className="flex flex-col items-center justify-between bg-blue pt-20">
+      <div className="flex flex-col items-center justify-between mt-20">
         {/* Fonts test */}
         <div className="border rounded p-3 my-1 mb-3">
           <h1 className="font-serif italic text-3xl">Works</h1>

@@ -1,4 +1,5 @@
-/* src/app/_/Navbar.tsx */
+/* src/app/_/.tsx */
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import siteMetadata from '@/_data/siteMetadata';
@@ -15,9 +16,28 @@ interface NavLink {
 }
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const isScrollingDown = currentScrollPos > prevScrollPos;
+
+      setIsScrolled(isScrollingDown);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
-    <header>
-      <nav className="fixed z-10 bg-black w-full">
+    <header className={`fixed bg-black z-10 w-full transition-transform duration-300 ease-in-out ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
+      <nav>
         <SectionContainer>
           <div className="flex items-center justify-between pt-6 pb-2 border-b border-white px-3">
             <div>

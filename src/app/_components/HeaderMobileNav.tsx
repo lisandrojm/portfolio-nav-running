@@ -49,7 +49,7 @@ export default function MobileNav() {
               </button>
             </div>
           </div>
-          <div className="fixed h-full w-full px-3">
+          <div className="px-3">
             <ul>
               {headerNavLinks.map((link, index) => (
                 <li key={link.title} className="py-3">

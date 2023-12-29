@@ -12,10 +12,11 @@ import SectionContainer from '@/_components/SectionContainer';
 export default function Home() {
   return (
     <SectionContainer>
-      <div className="flex flex-col items-center justify-between ">
+      <div className="flex flex-col items-center justify-between pt-20">
         {/* Fonts test */}
         <div className="border rounded p-3 my-1 mb-3">
-          <h1 className="font-serif italic text-3xl">Home svh</h1>
+          <h1 className="font-serif italic text-3xl">Works</h1>
+          <h1 className="font-serif italic text-3xl">Skills</h1>
         </div>
         <div className="border rounded p-3 my-1">
           <h1 className="font-serif italic text-3xl">Fonts</h1>

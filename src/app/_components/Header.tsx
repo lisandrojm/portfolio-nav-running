@@ -1,5 +1,6 @@
 /* src/app/_/Navbar.tsx */
-
+'use client';
+import React, { useState, useEffect } from 'react';
 import siteMetadata from '@/_data/siteMetadata';
 import headerNavLinks from '@/_data/headerNavLinks';
 import Link from '@/_components/Link';
@@ -12,10 +13,52 @@ interface NavLink {
   title: string;
   href: string;
 }
+
 export default function Navbar() {
+  // State variables to manage scroll behavior
+  // State variables to manage scroll behavior
+  const [prevScrollpos, setPrevScrollpos] = useState(0);
+  const [top, setTop] = useState(0);
+
+  useEffect(() => {
+    // Function to handle scroll events
+    const handleScroll = () => {
+      console.log('Scrolling...');
+      const currentScrollPos = typeof window !== 'undefined' ? window.pageYOffset : 0;
+      if (prevScrollpos > currentScrollPos) {
+        setTop(0); // Show navbar
+      } else {
+        setTop(-100); // Hide navbar
+      }
+      setPrevScrollpos(currentScrollPos);
+    };
+
+    // Add scroll event listener when the component mounts
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    // Clean up by removing the event listener when the component unmounts
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [prevScrollpos]);
+
+  // Styles for the navbar and links
+  const navbarStyle: React.CSSProperties = {
+    backgroundColor: '#333',
+    position: 'sticky',
+    top: `${top}px`,
+    width: '100%',
+    display: 'block',
+    transition: 'top 0.3s',
+  };
+
   return (
-    <header>
-      <nav className="fixed top-0 z-10 bg-black w-full">
+    <header id="navbar" style={navbarStyle}>
+      <nav className=" z-10 bg-black w-full">
         <SectionContainer>
           <div className="flex items-center justify-between pt-6 pb-2 border-b border-white px-3">
             <div>

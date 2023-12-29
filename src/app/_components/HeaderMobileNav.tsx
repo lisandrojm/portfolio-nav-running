@@ -32,8 +32,8 @@ export default function MobileNav() {
           <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
         </svg>
       </button>
-      <div className={`fixed left-0 top-0 z-100 h-full w-full transform inset-0 backdrop-blur-md border-l-[1px] border-orange duration-300 ease-in-out ${navShow ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="flex justify-between items-center pl-5 pr-3 pt-8 pb-3 border-b border-white mx-3 mb-3">
+      <div className={`fixed left-0 top-0 z-100 h-full w-full transform inset-0 backdrop-blur-md border-l-[1px] border-orange  duration-300 ease-in-out ${navShow ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex justify-between items-center px-1 pt-8 pb-3 border-b border-white mx-3 mb-3">
           <div>
             <Link onClick={onToggleNav} className="m-0 leading-5 text-orange font-serif italic text-1xl" href="/" aria-label={siteMetadata.headerTitle}>
               All Killer, No Filler.
@@ -50,7 +50,7 @@ export default function MobileNav() {
         <div className="fixed h-full w-full">
           <ul>
             {headerNavLinks.map((link, index) => (
-              <li key={link.title} className="pl-8 py-3">
+              <li key={link.title} className="pl-6 py-3">
                 <Link href={link.href} className="text-xl tracking-widest text-white" onClick={onToggleNav}>
                   {link.title}
                   {index < headerNavLinks.length - 0 && <span className="text-orange mx-3">→</span>}
@@ -58,12 +58,12 @@ export default function MobileNav() {
               </li>
             ))}
           </ul>
-          <div className="pl-8 py-4 ">
+          <div className="pl-6 py-4 ">
             <LinkButton href="/form" size="xxl" font="mono" onClick={onToggleNav}>
               Contact Me
             </LinkButton>
           </div>
-          <div className="pl-8 py-4 flex gap-4">
+          <div className="pl-6 py-4 flex gap-4">
             <div>
               <LinkIcon kind="github" href={siteMetadata.github} size={3} color="white" />
             </div>

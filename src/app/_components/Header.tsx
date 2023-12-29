@@ -15,8 +15,8 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 z-10 bg-black_a w-full">
       <nav>
-        <div className="container mx-auto px-5 lg:px-20 ">
-          <div className="flex items-center justify-between pt-6 pb-2 border-b border-white ">
+        <div className="container mx-auto px-3 lg:px-20 ">
+          <div className="flex items-center justify-between pt-6 pb-2 px-1 border-b border-white ">
             <div>
               <Link href="/" aria-label={siteMetadata.headerTitle}>
                 <div className="flex items-center justify-between">

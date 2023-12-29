@@ -13,40 +13,42 @@ interface NavLink {
 }
 export default function Navbar() {
   return (
-    <header>
+    <header className="fixed top-0 z-10 bg-black_a w-full">
       <nav>
-        <div className="pt-4 pb-2 flex items-center justify-between border-b border-white fixed bg-black_a  top-0 z-10 w-full">
-          <div>
-            <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center justify-center font-bold">
-                  <div>
-                    <h2 className="m-0 leading-5 text-white">FullStackDev</h2>
-                    <h3>
-                      <span className="text-sm text-orange">lisandrojm </span>
-                    </h3>
+        <div className="container mx-auto px-5 lg:px-20 ">
+          <div className="flex items-center justify-between pt-6 pb-2 border-b border-white ">
+            <div>
+              <Link href="/" aria-label={siteMetadata.headerTitle}>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-center font-bold">
+                    <div>
+                      <h2 className="m-0 leading-5 text-white">FullStackDev</h2>
+                      <h3>
+                        <span className="text-sm text-orange">lisandrojm </span>
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-          <div className="flex items-center leading-5 ">
-            {headerNavLinks
-              .filter((link: NavLink) => link.href !== '/')
-              .map((link: NavLink, index: number) => (
-                <div key={link.title} className="hidden lg:inline">
-                  <div className="flex">
-                    {index > 0 && <span className="text-white mx-3">|</span>}
-                    <Link href={link.href} className="hidden text-white lg:inline">
-                      {link.title}
-                    </Link>
+              </Link>
+            </div>
+            <div className="flex items-center leading-5 ">
+              {headerNavLinks
+                .filter((link: NavLink) => link.href !== '/')
+                .map((link: NavLink, index: number) => (
+                  <div key={link.title} className="hidden lg:inline">
+                    <div className="flex">
+                      {index > 0 && <span className="text-white mx-3">|</span>}
+                      <Link href={link.href} className="hidden text-white lg:inline">
+                        {link.title}
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              ))}
-            <LinkIcon kind="github" href={siteMetadata.github} size={3} color="white" margin="ml-5 sm:ml-5" padding="" />
-            <LinkIcon kind="linkedin" href={siteMetadata.linkedin} size={3} color="white" margin="ml-5 mr-4 sm:ml-5 sm:mr-5" padding="" />
-            <ThemeSwitcher />
-            <HeaderMobileNav />
+                ))}
+              <LinkIcon kind="github" href={siteMetadata.github} size={3} color="white" margin="ml-5 sm:ml-5" padding="" />
+              <LinkIcon kind="linkedin" href={siteMetadata.linkedin} size={3} color="white" margin="ml-5 mr-4 sm:ml-5 sm:mr-5" padding="" />
+              <ThemeSwitcher />
+              <HeaderMobileNav />
+            </div>
           </div>
         </div>
       </nav>

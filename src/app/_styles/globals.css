@@ -20,9 +20,9 @@
   :root {
     /* Colors */
     --accent-1: #000000;
-    --accent-1-Alpha: #0000005d;
+    --accent-1a: #0000005d;
     --accent-2: #ffffff;
-    --accent-2-Alpha: #fffffff1;
+    --accent-2a: #fffffff1;
     --accent-3: #f7768e;
     --accent-4: #15151e;
     --accent-5: #ff9e63;
@@ -39,7 +39,7 @@
       --accent-1: #ffffff;
       --accent-1a: #fffffff1;
       --accent-2: #000000;
-      --accent-2a: #0000005d;
+      --accent-2a: #000000c5;
       --accent-3: #15151e;
       --accent-4: #08c294;
       --accent-5: #79a1f7;
@@ -54,7 +54,7 @@
     --accent-1: #ffffff;
     --accent-1a: #fffffff1;
     --accent-2: #000000;
-    --accent-2a: #000000c7;
+    --accent-2a: #000000c5;
     --accent-3: #15151e;
     --accent-4: #08c294;
     --accent-5: #79a1f7;

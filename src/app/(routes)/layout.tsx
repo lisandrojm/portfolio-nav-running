@@ -5,8 +5,6 @@ import siteMetadata from '@/_data/siteMetadata';
 import { Roboto_Mono, Roboto_Serif, Roboto_Flex } from 'next/font/google';
 import '@/_styles/globals.css';
 import Background from '@/_components/Background';
-import Header from '@/_components/Header';
-import Footer from '@/_components/Footer';
 import Provider from '@/_components/Provider';
 import LayoutWrapper from '@/_components/LayoutWrapper';
 const roboto_mono = Roboto_Mono({ subsets: ['latin'], variable: '--font-mono' });

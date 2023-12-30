@@ -9,7 +9,7 @@ export default function Background() {
       <ul className={`${styles.floating}`}>
         <li className={`${styles.drift} ${styles.drift1} ${styles.delay1} ${styles.floating_li}`}>
           <div className={`${styles.float} ${styles.float1}`}>
-            <BgIcons kind="github" size={3} />
+            <BgIcons kind="github" size={2} />
           </div>
         </li>
         <li className={`${styles.drift} ${styles.drift2} ${styles.delay3} ${styles.floating_li}`}>
@@ -19,7 +19,7 @@ export default function Background() {
         </li>
         <li className={`${styles.drift} ${styles.drift3} ${styles.floating_li}`}>
           <div className={`${styles.float} ${styles.float3}`}>
-            <BgIcons kind="html" size={3} />
+            <BgIcons kind="html" size={2} />
           </div>
         </li>
         <li className={`${styles.drift} ${styles.drift5} ${styles.floating_li}`}>
@@ -43,7 +43,7 @@ export default function Background() {
           </div>
         </li>
         <li className={`${styles.drift} ${styles.drift9} ${styles.delay5} ${styles.floating_li}`}>
-          <div className={`${styles.float} ${styles.float9}`}>
+          <div className={`${styles.float} ${styles.float9} font-bold`}>
             <BgIcons kind="react" size={3} />
           </div>
         </li>

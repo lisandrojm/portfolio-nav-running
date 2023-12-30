@@ -9,9 +9,9 @@ export default function Footer() {
   return (
     <footer>
       <SectionContainer>
-        <div className="pt-4 pb-5 border-t border-white flex flex-col md:flex-row justify-between items-end md:items-center gap-4 px-3">
+        <div className="pt-4 pb-5 border-t border-white flex flex-col md:flex-row justify-between items-start md:items-center gap-4 px-3">
           <div className="flex justify-center items-center xs--hide">
-            <h6 className="font-serif text-mdkj text-orange">
+            <h6 className="font-serif text-md text-orange">
               site stack <span className="px-2">|</span>
             </h6>
             <ul className="flex gap-3">

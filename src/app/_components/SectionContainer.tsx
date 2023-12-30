@@ -7,5 +7,5 @@ interface Props {
 }
 
 export default function SectionContainer({ children }: Props) {
-  return <div className="container mx-auto px-3 xl:px-40">{children}</div>;
+  return <div className="container mx-auto px-3 xl:px-20">{children}</div>;
 }

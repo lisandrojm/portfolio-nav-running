@@ -1,4 +1,4 @@
-/* src/app/_components/eader.tsx */
+/* src/app/_components/Header.tsx */
 
 'use client';
 import React, { useState, useEffect } from 'react';

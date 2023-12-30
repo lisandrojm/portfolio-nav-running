@@ -2,12 +2,11 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import siteMetadata from '@/_data/siteMetadata';
 import Link from './Link';
 import LinkIcon from '@/_components/_icons/LinksIcons';
 import headerNavLinks from '@/_data/headerNavLinks';
-import { Button } from '@/_components/_ui';
 import LinkButton from '@/_components/_ui/LinkButton';
 import SectionContainer from '@/_components/SectionContainer';
 
@@ -19,12 +18,22 @@ export default function MobileNav() {
       if (status) {
         document.body.style.overflow = 'auto';
       } else {
-        // Prevent scrolling
         document.body.style.overflow = 'hidden';
       }
       return !status;
     });
   };
+  // Añade un efecto secundario para agregar o eliminar la clase 'h-full' al elemento 'header'
+  useEffect(() => {
+    const header = document.querySelector('header');
+    if (header) {
+      if (navShow) {
+        header.classList.add('h-full');
+      } else {
+        header.classList.remove('h-full');
+      }
+    }
+  }, [navShow]);
 
   return (
     <div>

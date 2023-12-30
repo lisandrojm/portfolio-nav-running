@@ -7,7 +7,7 @@ import '@/_styles/globals.css';
 import Background from '@/_components/Background';
 import Provider from '@/_components/Provider';
 import LayoutWrapper from '@/_components/LayoutWrapper';
-import ScrollUpButton from '@/_components/ScrollUpButton';
+import ScrollUp from '@/_components/ScrollUp';
 const roboto_mono = Roboto_Mono({ subsets: ['latin'], variable: '--font-mono' });
 const roboto_serif = Roboto_Serif({ subsets: ['latin'], variable: '--font-serif' });
 const roboto_flex = Roboto_Flex({ subsets: ['latin'], variable: '--font-flex' });
@@ -112,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LayoutWrapper>
             <main>{children}</main>
           </LayoutWrapper>
-          <ScrollUpButton />
+          <ScrollUp />
         </Provider>
       </body>
     </html>

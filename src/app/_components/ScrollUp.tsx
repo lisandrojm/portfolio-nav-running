@@ -1,14 +1,14 @@
-/* src/app/_components/ScrollUpButton.tsx */
+/* src/app/_components/ScrollUp.tsx */
 'use client';
 
 import React, { useEffect, useState } from 'react';
 
-const ScrollUpButton: React.FC = () => {
+const ScrollUp: React.FC = () => {
   const [showButton, setShowButton] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowButton(window.scrollY >= 300);
+      setShowButton(window.scrollY >= 500);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,4 +29,4 @@ const ScrollUpButton: React.FC = () => {
   );
 };
 
-export default ScrollUpButton;
+export default ScrollUp;

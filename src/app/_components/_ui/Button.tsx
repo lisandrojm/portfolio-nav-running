@@ -37,7 +37,7 @@ export function Button({ children, size = 'md', font = 'flex', ...props }: Props
     }
   };
 
-  const buttonClass = `bg-transparent border border-orange text-center font-semibold text-orange uppercase italic focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${getSizeClass()} ${getFontClass()}`;
+  const buttonClass = `bg-transparent border border-orange text-center font-semibold text-orange bg-black_a uppercase italic focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange ${getSizeClass()} ${getFontClass()}`;
 
   return (
     <button className={buttonClass} {...props}>

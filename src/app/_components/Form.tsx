@@ -22,17 +22,17 @@ export default function Example() {
         <form action="#" method="POST" className="mx-auto mt-6 max-w-md sm:mt-6">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div className="sm:col-span-2">
-              <div>
+              <div className="bg-black_a">
                 <FloatingLabelInput id="name" label="Name" type="text" name="name" autoComplete="name" />
               </div>
             </div>
             <div className="sm:col-span-2">
-              <div>
+              <div className="bg-black_a">
                 <FloatingLabelInput id="email" label="Email" type="email" name="email" autoComplete="email" required />
               </div>
             </div>
             <div className="sm:col-span-2">
-              <div>
+              <div className="bg-black_a">
                 <FloatingLabelTextarea id="message" label="Message" name="message" autoComplete="message" rows={4} defaultValue={''} />
               </div>
             </div>

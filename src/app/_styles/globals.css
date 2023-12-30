@@ -21,8 +21,8 @@
     /* Colors */
     --accent-1: #000000;
     --accent-1a: #00000064;
-    --accent-2: #fefdf0;
-    --accent-2a: #fefdf0ad;
+    --accent-2: #ffffff;
+    --accent-2a: #ffffffad;
     --accent-3: #f7768e;
     --accent-4: #15151e;
     --accent-5: #ff9e63;
@@ -36,8 +36,8 @@
   @media (prefers-color-scheme: dark) {
     :root {
       /*---------------------/* Tailwind color tags */
-      --accent-1: #fefdf0;
-      --accent-1a: #fefdf0ad;
+      --accent-1: #ffffff;
+      --accent-1a: #ffffffad;
       --accent-2: #000000;
       --accent-2a: #00000064;
       --accent-3: #15151e;
@@ -51,8 +51,8 @@
     }
   }
   [data-theme='dark'] {
-    --accent-1: #fefdf0;
-    --accent-1a: #fefdf0ad;
+    --accent-1: #ffffff;
+    --accent-1a: #ffffffad;
     --accent-2: #000000;
     --accent-2a: #00000064;
     --accent-3: #15151e;
@@ -68,8 +68,8 @@
   [data-theme='light'] {
     --accent-1: #000000;
     --accent-1a: #00000064;
-    --accent-2: #fefdf0;
-    --accent-2a: #fefdf0ad;
+    --accent-2: #ffffff;
+    --accent-2a: #ffffffad;
     --accent-3: #f7768e;
     --accent-4: #15151e;
     --accent-5: #ff9e63;

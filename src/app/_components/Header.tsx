@@ -1,4 +1,4 @@
-/* src/app/_components/Header.tsx */
+/* src/app/_components/eader.tsx */
 
 'use client';
 import React, { useState, useEffect } from 'react';
@@ -16,27 +16,8 @@ interface NavLink {
 }
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const isScrollingDown = currentScrollPos > prevScrollPos;
-
-      setIsScrolled(isScrollingDown);
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [prevScrollPos]);
-
   return (
-    <header className={`fixed bg-black z-10 w-full transition-transform duration-300 ease-in-out ${isScrolled ? '-translate-y-full' : 'translate-y-0'}`}>
+    <header className={`sticky top-0 bg-black z-10 w-full `}>
       <nav>
         <SectionContainer>
           <div className="flex items-center justify-between pt-6 pb-2 border-b border-white px-3">

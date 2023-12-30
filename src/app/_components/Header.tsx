@@ -20,7 +20,7 @@ export default function Navbar() {
     <header className={`sticky top-0 bg-black z-10 w-full `}>
       <nav>
         <SectionContainer>
-          <div className="flex items-center justify-between pt-6 pb-2 border-b border-white px-3">
+          <div className="flex items-center justify-between pt-4 pb-2 border-b border-white px-3">
             <div>
               <Link href="/" aria-label={siteMetadata.headerTitle}>
                 <div className="flex items-center justify-between">

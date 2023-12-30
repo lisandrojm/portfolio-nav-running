@@ -35,7 +35,7 @@ export default function MobileNav() {
       </button>
       <div className={`fixed left-0 top-0 z-100 h-full w-full transform inset-0 bg-black border-l-[1px] border-orange duration-300 ease-in-out ${navShow ? 'translate-x-0' : 'translate-x-full'}`}>
         <SectionContainer>
-          <div className="flex justify-between items-center border-b border-white pb-3 mb-3 pt-8 px-3">
+          <div className="flex justify-between items-center border-b border-white pb-3 mb-3 pt-6 px-3">
             <div>
               <Link onClick={onToggleNav} className="m-0 leading-5 text-orange font-serif italic text-1xl" href="/" aria-label={siteMetadata.headerTitle}>
                 All Killer, No Filler.
